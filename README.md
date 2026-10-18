@@ -142,3 +142,7 @@ regions use screen-local logical coordinates and exports retain physical pixels.
 Joins use matching content inside the overlap and replace the previous frame's
 tail, so narrow viewport borders and clipping shadows do not repeat at each join.
 The live preview applies those same overlap corrections.
+
+## License
+
+MIT License. See [LICENSE](LICENSE).

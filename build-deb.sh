@@ -85,6 +85,7 @@ chmod 755 "$package_root/usr/bin/scroll-capture"
 install -m644 "$project_dir/packaging/scroll-capture.desktop" "$package_root/usr/share/applications/scroll-capture.desktop"
 install -m644 "$project_dir/src/scroll_capture/assets/icon.svg" "$package_root/usr/share/icons/hicolor/scalable/apps/scroll-capture.svg"
 gzip -9 -n -c "$project_dir/README.md" > "$package_root/usr/share/doc/scroll-capture/README.md.gz"
+install -m644 "$project_dir/LICENSE" "$package_root/usr/share/doc/scroll-capture/copyright"
 
 printf 'Resolving native library dependencies and writing package metadata...\n'
 package_version="$("$python_bin" "$project_dir/packaging/deb_metadata.py" "$package_root" "$python_version" "$architecture")"
