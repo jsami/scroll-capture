@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scroll-capture"
+version = "0.1.0"
+description = "A small X11 screenshot tool with manual scrolling capture and annotations"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "PySide6-Essentials>=6.7,<7",
+  "numpy>=1.26,<3",
+  "opencv-python-headless>=4.9,<5",
+  "python-xlib>=0.33,<1",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10", "pytest-qt>=4.4,<5"]
+
+[project.scripts]
+scroll-capture = "scroll_capture.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+scroll_capture = ["assets/*.svg"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+qt_api = "pyside6"
+

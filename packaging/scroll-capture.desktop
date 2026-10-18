@@ -1,0 +1,19 @@
+[Desktop Entry]
+Type=Application
+Name=Scroll Capture
+Comment=Capture regions and manually stitch scrolling screenshots
+Exec=scroll-capture
+Icon=scroll-capture
+Terminal=false
+Categories=Graphics;2DGraphics;RasterGraphics;
+StartupNotify=false
+Actions=Scroll;Region;
+
+[Desktop Action Scroll]
+Name=Scrolling capture
+Exec=scroll-capture --scroll
+
+[Desktop Action Region]
+Name=Region capture
+Exec=scroll-capture --capture
+
